@@ -2,6 +2,15 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+
+   <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -23,7 +32,7 @@
 
   <div class="field">
     <%= f.label :role %><br />
-    <%= f.select :role, [["buddy", "buddy"], ['trainee', '2']] %>
+    <%= f.select :role, [["buddy", 1], ["trainee", 2]] %>
   </div>
 
   <div class="actions">
